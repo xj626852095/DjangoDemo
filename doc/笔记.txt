@@ -1,2 +1,9 @@
 1. 启动服务
     python manage.py runserver 0.0.0.0:8000
+
+2. 参数传递
+    url路径参数 (?P<name>pattern) eg： url(r"^num/(?P<param>\d+)/$", views.printNum)
+    eg:
+    def printNum(request, param):
+        num = request.GET.get("num")
+        return HttpResponse("num: %s, param:%s"%(num, param))
