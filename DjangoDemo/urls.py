@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^hello/$', views.hello),
     url(r"^time/$", views.curTime),
     url(r"^num/(?P<param>\d+)/$", views.printNum),
-    url(r"^temp/$", views.temp)
+    url(r"^temp/$", views.temp),
+    url(r"^json/$", views.printJson)
 ]
