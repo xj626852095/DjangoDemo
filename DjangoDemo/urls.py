@@ -20,7 +20,8 @@ from myweb import views as mywebViews
 
 """
 正则表达式字符串的开头字母“r”。 它告诉Python这是个原始字符串，不需要处理里面的反斜杠（转义字符）
-url路径参数 (?P<name>pattern)
+url路径参数 (?P<name>pattern),
+添加一个新的app, myweb
 """
 
 urlpatterns = [
