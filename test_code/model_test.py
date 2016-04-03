@@ -33,6 +33,31 @@ from myweb.models import Pushlish
 #            city='Cambridge', state_province='MA', country='U.S.A.',
 #            website='http://www.oreilly.com/')
 # p2.save()
-pushlishs =  Pushlish.objects.all()
+#
+# p2.name = "中文"
+# p2.save()
+
+pushlishs =  Pushlish.objects.filter(name='kevin')
 print pushlishs
 
+pushlishs =  Pushlish.objects.filter(name__contains='kevin')
+print pushlishs
+
+pushlishs =  Pushlish.objects.filter(name__startswith='kevin')
+print pushlishs
+
+#排序 order , 逆向排序字段前加-
+pushlishs =  Pushlish.objects.filter(id__range=[3,4]).order_by("-id")
+print pushlishs
+
+#更新
+pushlishs =  Pushlish.objects.filter(id__range=[3,4]).update(address="长沙")
+print pushlishs
+
+##获取单个对象， 不是单个则会异常
+pushlishs = Pushlish.objects.get(name='kevin')
+print pushlishs
+
+#删除数据
+pushlishs =  Pushlish.objects.filter(id=4).delete()
+print pushlishs
