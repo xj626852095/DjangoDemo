@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from demo import views
+from myweb import views as mywebViews
 
 """
 正则表达式字符串的开头字母“r”。 它告诉Python这是个原始字符串，不需要处理里面的反斜杠（转义字符）
@@ -29,5 +30,7 @@ urlpatterns = [
     url(r"^time/$", views.curTime),
     url(r"^num/(?P<param>\d+)/$", views.printNum),
     url(r"^temp/$", views.temp),
-    url(r"^json/$", views.printJson)
+    url(r"^json/$", views.printJson),
+
+    url(r"^myweb/temp/$", mywebViews.temp)
 ]
