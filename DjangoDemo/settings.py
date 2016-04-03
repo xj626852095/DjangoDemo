@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'demo',
+    'myweb'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -46,7 +47,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware'
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware'
 )
 
 ROOT_URLCONF = 'DjangoDemo.urls'
@@ -87,8 +89,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': "django_demo",
         'USER' : "root",
-        "PASSWORD" : "root",
-        "HOST" : "192.168.10.50",
+        "PASSWORD" : "",
+        "HOST" : "127.0.0.1",
         "PORT" : "3306"
     }
 }
