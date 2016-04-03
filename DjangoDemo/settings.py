@@ -45,10 +45,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 )
 
 ROOT_URLCONF = 'DjangoDemo.urls'
@@ -56,8 +54,7 @@ ROOT_URLCONF = 'DjangoDemo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,6 +66,8 @@ TEMPLATES = [
         },
     },
 ]
+
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'))
 
 WSGI_APPLICATION = 'DjangoDemo.wsgi.application'
 
@@ -88,8 +87,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': "django_demo",
         'USER' : "root",
-        "PASSWORD" : "",
-        "HOST" : "127.0.0.1",
+        "PASSWORD" : "root",
+        "HOST" : "192.168.10.50",
         "PORT" : "3306"
     }
 }
