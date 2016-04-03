@@ -24,6 +24,8 @@ url路径参数 (?P<name>pattern),
 添加一个新的app, myweb
 """
 
+admin.autodiscover()
+
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
 
