@@ -35,5 +35,7 @@ urlpatterns = [
     url(r"^temp/$", views.temp),
     url(r"^json/$", views.printJson),
 
-    url(r"^myweb/temp/$", mywebViews.temp)
+    #url(r"^myweb/temp/$", mywebViews.temp),
+    #url(r"^myweb/test/$", mywebViews.test)
+    url(r"^myweb/", include("myweb.urls"))
 ]
